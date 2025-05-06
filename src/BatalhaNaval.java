@@ -36,16 +36,18 @@ public class BatalhaNaval {
 
 
     public static void main(String[] args) {
-        System.out.println("==== BATALHA NAVAL ====");
+        System.out.println("==== BEM VINDO À BATALHA NAVAL ====");
 
 
         System.out.println("Digite o nome do Jogador 1:");
         nome1 = scanner.nextLine();
 
 
-        System.out.println("Deseja jogar contra o computador? (s/n):");
-        String resposta = scanner.nextLine();
-        if (resposta.equalsIgnoreCase("s")) {
+        System.out.println("Digite 1 para jogar contra o computador ou digite 2 para jogar" +
+                " contra outro jogador");
+        int resposta = scanner.nextInt();
+        scanner.nextLine();
+        if (resposta == 1) {
             contraPC = true;
             nome2 = "Computador";
         } else {
@@ -55,8 +57,8 @@ public class BatalhaNaval {
 
 
         System.out.println("Deseja posicionamento automático dos navios? (s/n):");
-        resposta = scanner.nextLine();
-        if (resposta.equalsIgnoreCase("s")) {
+        String respostaPosicionamento = scanner.nextLine();
+        if (respostaPosicionamento.equalsIgnoreCase("s")) {
             posicionamentoAutomatico = true;
         }
 
@@ -128,8 +130,11 @@ public class BatalhaNaval {
                 } else {
                     System.out.println("Posicionando navio de tamanho " + tamanho);
                     exibirMapa(mapa, true);
+                    System.out.println("Digite a linha (A-J): ");
                     linha = lerLinha();
+                    System.out.println("Digite a coluna (1-10): ");
                     coluna = lerColuna();
+                    scanner.nextLine();
                     System.out.println("Deseja posicionar horizontal? (s/n):");
                     String dir = scanner.next();
                     horizontal = dir.equalsIgnoreCase("s");
