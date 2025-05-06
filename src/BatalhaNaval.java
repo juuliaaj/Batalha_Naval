@@ -134,7 +134,6 @@ public class BatalhaNaval {
                     linha = lerLinha();
                     System.out.println("Digite a coluna (1-10): ");
                     coluna = lerColuna();
-                    scanner.nextLine();
                     System.out.println("Deseja posicionar horizontal? (s/n):");
                     String dir = scanner.next();
                     horizontal = dir.equalsIgnoreCase("s");
