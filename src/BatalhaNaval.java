@@ -27,7 +27,6 @@ public class BatalhaNaval {
     static char[][] tirosJogador2 = new char[TAMANHO][TAMANHO];
 
 
-
     static String nome1;
     static String nome2;
     static boolean contraPC = false;
